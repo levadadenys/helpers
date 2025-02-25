@@ -1,4 +1,4 @@
-export type AnyArray = any[];
+export type AnyArray = unknown[];
 
 export type Expect<T extends true> = T;
 
