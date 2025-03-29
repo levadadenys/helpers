@@ -1,5 +1,5 @@
 /**
- * Binary search algorithm
+ * Binary search algorithm. O(log n) time complexity
  * @param sortedList
  * @param itemToSearch
  * @returns the index of the number in the list if it exists, otherwise -1
@@ -30,7 +30,7 @@ export const binarySearch = (sortedList: number[], itemToSearch: number): number
 };
 
 /**
- * Recursive binary search algorithm
+ * Recursive binary search algorithm. O(log n) time complexity
  * @param sortedList
  * @param itemToSearch
  * @param low lowest index in search range
