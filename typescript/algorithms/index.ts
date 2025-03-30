@@ -1,1 +1,1 @@
-export {binarySearch, recursiveBinarySearch} from './binarySearch';
+export * as searchAlgorithms from './search';
