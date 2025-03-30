@@ -1,5 +1,5 @@
-import {Equals} from './../conditionTypes'
-import {Expect} from './../utils'
+import {Equals} from '../conditionTypes'
+import {Expect} from '../utils'
 
 export type ObjectValues<T extends object> = T[keyof T];
 
