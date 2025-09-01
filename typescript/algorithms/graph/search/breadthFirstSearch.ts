@@ -38,8 +38,14 @@ const graphWithMangoSeller = {
   },
 }
 
-export const breadthFirstSearch =
-  (
+/**
+ * Breadth-First Search (BFS) algorithm to find a node in a graph that satisfies a given condition.
+ * O(V + E) time complexity
+ * @param graph
+ * @param conditionFunction
+ * @param startNodeKey
+ */
+export const breadthFirstSearch = (
     graph: typeof graphWithMangoSeller,
     conditionFunction =
     (person: typeof graphWithMangoSeller[keyof typeof graphWithMangoSeller],) => person.isMangoSeller,
@@ -67,3 +73,6 @@ export const breadthFirstSearch =
       }
     }
   };
+
+// Example usage
+// const mangoSeller = breadthFirstSearch(graphWithMangoSeller, (person) => !!person.isMangoSeller, 'anna');

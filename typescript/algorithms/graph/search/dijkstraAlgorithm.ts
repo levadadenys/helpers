@@ -9,8 +9,15 @@ const weighedGraph = {
   H: { E: 1, F: 3 },
 }
 
-
-const dijkstra = (graph: Record<string, Record<string, number>>, start: string) => {
+/**
+ * Dijkstra's algorithm for finding the shortest path in a weighted graph. O((V + E) log V) time complexity
+ * @param graph
+ * @param start
+ */
+export const dijkstraAlgorithm = (
+  graph: Record<string, Record<string, number>>,
+  start: string
+) => {
   const distances: Record<string, number> = {};
   const visited: Record<string, boolean> = {};
   const previous: Record<string, string | null> = {};
@@ -44,4 +51,4 @@ const dijkstra = (graph: Record<string, Record<string, number>>, start: string) 
   return { distances, previous };
 }
 
-// console.log(dijkstra(weighedGraph, 'A'));
+// console.log(dijkstraAlgorithm(weighedGraph, 'A'));
