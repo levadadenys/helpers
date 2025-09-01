@@ -15,12 +15,12 @@ const parseTimeToNumber = (time: string) => {
   return (hours * 60) + minutes;
 }
 
-const getOptimalRoomSchedule = (sortedLessons: {lesson: string, start: string, end: string}[]) => {
+export const getOptimalRoomSchedule = (sortedLessons: {lesson: string, start: string, end: string}[]) => {
   const optimalSchedule: {lesson: string, start: string, end: string}[] = [];
 
   let lastEndTime = 0;
 
-  for(let i = 0; i <= sortedLessons.length - 1; i++) {
+  for(let i = 0; i < sortedLessons.length; i++) {
     const lesson = sortedLessons[i];
     const lessonStartTime = parseTimeToNumber(lesson.start);
     const lessonEndTime = parseTimeToNumber(lesson.end);
