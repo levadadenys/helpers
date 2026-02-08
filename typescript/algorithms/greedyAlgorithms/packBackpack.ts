@@ -11,7 +11,7 @@ export const packBackpack = (
   maxWeight: number,
   sortedByValueItemsArray: BackpackItem[],
   packedItems: BackpackItem[] = []
-) => {
+): BackpackItem[] => {
   let availableWeight = maxWeight;
   if(!sortedByValueItemsArray) {
     sortedByValueItemsArray = [...items].sort((a, b) => (b.value) - (a.value));
@@ -36,7 +36,7 @@ export const packBackpack = (
     return packBackpack(sortedByValueItemsArray, availableWeight, sortedByValueItemsArray, packedItems);
   }
 
-return packedItems
+return packedItems;
 }
 
 // console.log(packBackpack(itemsAvailableToPack, 16));
